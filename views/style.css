@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   background-color: black;
   font-family: "Roboto", sans-serif;
@@ -6,6 +6,111 @@ body {
 }
 * {
   letter-spacing: 0 !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Header CSS START */
+/*HEADER SECTION*/
+.showcase.our-story-card {
+  width: 100%;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/84526d58-475e-4e6f-9c81-d2d78ddce803/a76c1727-34da-4d80-99a3-69476e78860d/IN-en-20221228-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    no-repeat center center/cover;
+  position: relative;
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  /* box-shadow: inset 120px 100px 250px, inset -140px -100px 250px #000000; */
+}
+
+/*NAV BAR*/
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  padding: 26px 0px 0px 55px;
+}
+/* LOGO */
+.showcase-top #logo {
+  height: 35px;
+}
+.showcase-top .submit {
+  background-color: #ef0914;
+  padding: 5px 16px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  float: right;
+  position: relative;
+  right: 55px;
+}
+.showcase-top select {
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+  float: right;
+  position: relative;
+  right: 85px;
+  padding: 5px 10px;
+}
+.showcase-top select option {
+  color: #000000;
+}
+
+/* Get Started */
+.showcase .get-started-container {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  top: 180px;
+  width: 100%;
+}
+.showcase .get-started-container h1 {
+  color: white;
+}
+.showcase .get-started-container p {
+  color: white;
+}
+.showcase .get-started-container h1 {
+  font-size: 3.9rem;
+  padding: 15px;
+}
+.showcase .get-started-container .para-1 {
+  font-size: 1.7rem;
+  margin: 17px 17px;
+}
+.showcase .get-started-container .para-2 {
+  font-size: 1.2rem;
+  margin: 17px 17px;
+}
+.showcase .get-started-container input {
+  width: 30%;
+  padding: 21px;
+  border: none;
+  margin-top: 0.5%;
+  outline: none;
+}
+.showcase .get-started-container button {
+  background-color: #ef0914;
+  padding: 21px;
+  border: none;
+  color: white;
+  margin-left: -0.3%;
+  font-weight: bold;
+  width: 15%;
+  font-size: 15px;
+}
+/* Header CSS END */
+
+a {
+  text-decoration: none;
 }
 ul.structural {
   margin: 0;
@@ -22,7 +127,7 @@ ul > li {
 }
 ul {
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .our-story-card {
   background: transparent;
@@ -68,8 +173,8 @@ ul {
 .footer-top-a {
   color: #737373;
 }
-a {
-  text-decoration: none;
+.footer-top-a:hover {
+  border-bottom: 2px solid;
 }
 
 .footer-links {
@@ -85,7 +190,7 @@ a {
   min-width: 100px;
   padding: 0 12px 0 0;
   vertical-align: top;
-  width: 25%;
+  width: 20%;
 }
 .footer-link {
   color: #737373;
@@ -97,9 +202,13 @@ a {
 .language {
   color: #8c8c8c;
   background-color: transparent;
-  border: 1px solid grey;
-  padding: 8px;
-  border-radius: 3px;
+  border: 1px solid #333;
+  padding: 12px 26px 12px 30px;
+  border-radius: 2px;
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: right;
+  content: "\e896";
 }
 
 /* <===== FAQS ======> */
@@ -158,10 +267,10 @@ a {
 .faq-card .faq-answer.closed {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
 
 .faq-card .faq-answer.open {
   max-height: 1200px;
-  transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
